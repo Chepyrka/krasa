@@ -189,6 +189,25 @@
             background: linear-gradient(135deg, #F8F1EC 0%, #EADCD2 100%);
         }
 
+        .section-contact{
+            padding: 5rem 0;
+            background: #EADCD2;
+            text-align: center;
+            color: #333;
+        }
+
+        .section-contact h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #D6A77A;
+        }
+
+        .section-contact p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
         .section-title {
             text-align: center;
             font-size: 3rem;
