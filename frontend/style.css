@@ -209,6 +209,65 @@
             padding: 0 20px;
         }
 
+        .section-survey {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #F8F1EC, #EADCD2);
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .section-survey h2 {
+            font-size: 2.6rem;
+            color: #D6A77A;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-family: 'DM Serif Text', serif;        
+        }
+
+        .section-survey form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section-survey label {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .section-survey input,
+        .section-survey textarea,
+        .section-survey select {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .section-survey textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .section-survey.primary-btn {
+            background-color: #D6A77A;
+            color: white;
+            border: none;
+            padding: 0.9rem 2 rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .section-survey.primary-btn:hover {
+            background-color: #b9895d;
+        }
+
         .contact-list {
             list-style: none;
             padding: 0;

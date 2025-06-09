@@ -2,19 +2,58 @@
 <html lang="en">
     <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started - KRASA</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Started - KRASA</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
 
+        <header class="header">
+            <nav class="nav container">
+                <div class="logo">KRASA</div>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav> 
+        </header>
+        
+        <section class="section-survey">
+            <div class="section-container">
+                <h2>Let's get to know you</h2>
+                <form action="#" method="post">
+                    <label for="profession">What is your profession?</label>
+                    <input type="text" id="profession" name="profession" list="professions" required>
+                    <datalist id="professions">
+                        <option value="Nail Technician">
+                        <option value="Hair Stylist">
+                        <option value="Cosmetologist">
+                        <option value="Barber">
+                        <option value="Feet-care Artist">
+                        <option value="Salon Manager"></option>
+                        <option value="Other">
+                    </datalist>
+
+                    <label for="source">How did you find out about us?</label>
+                    <input type="text" id="source" name="source" placeholder="Instagram, Telegram, friend, etc" required>
+
+                    <label for="goal">What do you plan to use KRASA for?</label>
+                    <textarea name="goal" id="goal" placeholder="e.g., manage appointments, grow my business..." required></textarea>
+
+                    <button type="submit" class="primary-btn">Continue</button>
+                </form>
+            </div>
+        </section>
+
     </body>
 
-    <footer>
-
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KRASA. Built for beauty professionals.</p>
+        </div>
     </footer>
 </html>
