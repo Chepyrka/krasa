@@ -189,23 +189,41 @@
             background: linear-gradient(135deg, #F8F1EC 0%, #EADCD2 100%);
         }
 
-        .section-contact{
-            padding: 5rem 0;
-            background: #EADCD2;
+        .section-contact {
+            padding: 6rem 0;
+            background: #F8F1EC;
+            color: #1a1a1a;
             text-align: center;
-            color: #333;
         }
 
         .section-contact h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
             color: #D6A77A;
+            margin-bottom: 2rem;
+            font-weight: 800;
         }
 
-        .section-contact p {
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
+        .section-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.3rem;
+            line-height: 2.2;
+        }
+
+        .contact-list li a {
+            color: #D6A77A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-list li a:hover {
+            text-decoration: underline;
         }
 
         .section-title {
