@@ -93,3 +93,34 @@
             }
         `;
         document.head.appendChild(style);
+
+        function setupButtonGroup(groupId, otherInputId = null) {
+            const group = document.getElementById(groupId);
+            const buttons = group.querySelectorAll("button");
+            const otherInput = otherInputId ? document.getElementById(otherInputId) : null;
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // Remove "selected" from all buttons
+                    buttons.forEach(btn => btn.classList.remove("selected"));
+
+                    //Add "selected to the clicked button
+                    button.classList.add("selected");
+
+                    //Show or hide "Other" input field
+                    if(button.dataset.show === otherInput) {
+                        if (otherInput) otherInput.style.display = "block";
+                    }
+                    else {
+                        if (otherInput) otherInput.style.display = "none";
+                    }
+                });
+            });
+        }
+
+        //Run the function once the page is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            setupButtonGroup("profession-group", "profession-other");
+            setupButtonGroup("trafic-group", "trafic-other");
+            setupButtonGroup("goal-group");
+        });
