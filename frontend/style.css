@@ -212,17 +212,59 @@
         .section-survey {
             padding: 6rem 0;
             background: linear-gradient(135deg, #F8F1EC, #EADCD2);
-            text-align: center;
             color: #1a1a1a;
+            font-family: "DM Serif Text", serif;
         }
 
         .section-survey h2 {
-            font-size: 2.6rem;
+            text-align: center;
+            font-size: 2.8rem;
             color: #D6A77A;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             font-weight: 700;
-            font-family: 'DM Serif Text', serif;        
+            /*font-family: 'DM Serif Text', serif;  */      
         }
+
+        .survey-group {
+            margin-bottom: 3rem;
+        }
+
+        .survey-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .button-group button {
+            margin: 5px;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #D6A77A;
+            background-color: transparent;
+            color: #1a1a1a;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .button-group button:hover {
+            background-color: #D6A77A;
+            color: white;
+        }
+
+        .other-input {
+            display: block;
+            margin: 1.5rem auto 0;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
 
         .section-survey form {
             max-width: 600px;
@@ -254,12 +296,14 @@
         }
 
         .section-survey.primary-btn {
+            display: block;
+            margin: 3rem auto 0;
             background-color: #D6A77A;
             color: white;
             border: none;
-            padding: 0.9rem 2 rem;
-            font-size: 1rem;
-            border-radius: 8px;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
             cursor: pointer;
             transition: background 0.3s ease;
         }

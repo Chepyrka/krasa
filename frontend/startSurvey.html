@@ -26,24 +26,49 @@
             <div class="section-container">
                 <h2>Let's get to know you</h2>
                 <form action="#" method="post">
-                    <label for="profession">What is your profession?</label>
-                    <input type="text" id="profession" name="profession" list="professions" required>
-                    <datalist id="professions">
-                        <option value="Nail Technician">
-                        <option value="Hair Stylist">
-                        <option value="Cosmetologist">
-                        <option value="Barber">
-                        <option value="Feet-care Artist">
-                        <option value="Salon Manager"></option>
-                        <option value="Other">
-                    </datalist>
 
-                    <label for="source">How did you find out about us?</label>
-                    <input type="text" id="source" name="source" placeholder="Instagram, Telegram, friend, etc" required>
+                    <!--Profession-->
+                    <div class="survey-group">
+                        <p class="survey-question">What is your profession?</p>
+                        <div class="button-group" id="profession-group">
+                            <button type="button">Nail Technician</button>
+                            <button type="button">Cosmetologist</button>
+                            <button type="button">Hair Stylists</button>
+                            <button type="button">Feet-care Artist</button>
+                            <button type="button">Barber</button>
+                            <button type="button">Salon Manager</button>
+                            <button type="button" data-show="profession-other">Other</button>
+                        </div>
+                        <input type="text" id="profession-other" class="other-input" placeholder="Please specify..." style="display: none;">
+                    </div>
 
-                    <label for="goal">What do you plan to use KRASA for?</label>
-                    <textarea name="goal" id="goal" placeholder="e.g., manage appointments, grow my business..." required></textarea>
-
+                    <!--Traffic source-->
+                    <div class="survey-group">
+                        <p class="survey-question">How did you find out about us?</p>
+                        <div class="button-group" id="traffic-group">
+                                <button type="button">Google Search</button>
+                                <button type="button">Telegram</button>
+                                <button type="button">Instagram</button>
+                                <button type="button">Facebook</button>
+                                <button type="button">Friends</button>
+                                <button type="button">Tik-tok</button>
+                                <button type="button" data-show="traffic-other">Other</button>
+                        </div>
+                        <input type="text" id="traffic-other" class="other-input" placeholder="Please specify..." style="display: none;">
+                    </div>
+                    
+                    <!--Goals-->
+                    <div class="survey-group">
+                        <p class="survey-question">What do you plan to use KRASA for?</p>
+                        <div class="button-group" id="goal-group">
+                            <button type="button">Manage appointments</button>
+                            <button type="button">Grow my business</button>
+                            <button type="button">Send remainders to clients</button>
+                            <button type="button">Track your business finances</button>
+                            <button type="button">Everything above</button>
+                        </div>
+                    </div>
+                        
                     <button type="submit" class="primary-btn">Continue</button>
                 </form>
             </div>
