@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Started - KRASA</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header class="header">
+            <nav class="nav container">
+                <div class="logo">KRASA</div>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav> 
+        </header>
+        
+        <section class="section-survey">
+            <div class="section-container">
+                <h2>Let's get to know you</h2>
+                <form action="#" method="post">
+
+                    <!--Profession-->
+                    <div class="survey-group">
+                        <p class="survey-question">What is your profession?</p>
+                        <div class="button-group" id="profession-group">
+                            <button type="button">Nail Technician</button>
+                            <button type="button">Cosmetologist</button>
+                            <button type="button">Hair Stylists</button>
+                            <button type="button">Feet-care Artist</button>
+                            <button type="button">Barber</button>
+                            <button type="button">Salon Manager</button>
+                            <button type="button" data-show="profession-other">Other</button>
+                        </div>
+                        <input type="text" id="profession-other" class="other-input" placeholder="Please specify..." style="display: none;">
+                    </div>
+
+                    <!--Traffic source-->
+                    <div class="survey-group">
+                        <p class="survey-question">How did you find out about us?</p>
+                        <div class="button-group" id="traffic-group">
+                                <button type="button">Google Search</button>
+                                <button type="button">Telegram</button>
+                                <button type="button">Instagram</button>
+                                <button type="button">Facebook</button>
+                                <button type="button">Friends</button>
+                                <button type="button">Tik-tok</button>
+                                <button type="button" data-show="traffic-other">Other</button>
+                        </div>
+                        <input type="text" id="traffic-other" class="other-input" placeholder="Please specify..." style="display: none;">
+                    </div>
+                    
+                    <!--Goals-->
+                    <div class="survey-group">
+                        <p class="survey-question">What do you plan to use KRASA for?</p>
+                        <div class="button-group" id="goal-group">
+                            <button type="button">Manage appointments</button>
+                            <button type="button">Grow my business</button>
+                            <button type="button">Send remainders to clients</button>
+                            <button type="button">Track your business finances</button>
+                            <button type="button">Everything above</button>
+                        </div>
+                    </div>
+                        
+                    <button type="submit" class="primary-btn">Continue</button>
+                </form>
+            </div>
+        </section>
+
+    </body>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KRASA. Built for beauty professionals.</p>
+        </div>
+    </footer>
+</html>
