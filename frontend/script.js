@@ -93,3 +93,37 @@
             }
         `;
         document.head.appendChild(style);
+
+        function setupButtonGroup(groupId, otherInputId = null) {
+            const group = document.getElementById(groupId);
+            const buttons = group.querySelectorAll("button");
+            const otherInput = otherInputId ? document.getElementById(otherInputId) : null;
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // Toggle selected class for the clicked button
+                    const isSelected = button.classList.contains("selected");
+                    button.classList.toggle("selected");
+
+                    // Handle Other button specifically
+                    if (button.dataset.show === otherInputId && otherInput) {
+                        otherInput.style.display = button.classList.contains("selected") ? "block" : "none";
+                    }
+
+                    // If a non-Other button is clicked, hide the Other input
+                    if (button.dataset.show !== otherInputId && otherInput) {
+                        const otherButton = [...buttons].find(b => b.dataset.show === otherInputId);
+                        if (otherButton && !otherButton.classList.contains("selected")) {
+                            otherInput.style.display = "none";
+                        }
+                    }
+                });
+            });
+        }
+
+        // Run the function once the page is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            setupButtonGroup("profession-group", "profession-other");
+            setupButtonGroup("traffic-group", "traffic-other");
+            setupButtonGroup("goal-group");
+        });
