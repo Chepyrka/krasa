@@ -101,26 +101,29 @@
 
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
-                    // Remove "selected" from all buttons
-                    buttons.forEach(btn => btn.classList.remove("selected"));
+                    // Toggle selected class for the clicked button
+                    const isSelected = button.classList.contains("selected");
+                    button.classList.toggle("selected");
 
-                    //Add "selected to the clicked button
-                    button.classList.add("selected");
-
-                    //Show or hide "Other" input field
-                    if(button.dataset.show === otherInput) {
-                        if (otherInput) otherInput.style.display = "block";
+                    // Handle Other button specifically
+                    if (button.dataset.show === otherInputId && otherInput) {
+                        otherInput.style.display = button.classList.contains("selected") ? "block" : "none";
                     }
-                    else {
-                        if (otherInput) otherInput.style.display = "none";
+
+                    // If a non-Other button is clicked, hide the Other input
+                    if (button.dataset.show !== otherInputId && otherInput) {
+                        const otherButton = [...buttons].find(b => b.dataset.show === otherInputId);
+                        if (otherButton && !otherButton.classList.contains("selected")) {
+                            otherInput.style.display = "none";
+                        }
                     }
                 });
             });
         }
 
-        //Run the function once the page is fully loaded
+        // Run the function once the page is fully loaded
         document.addEventListener("DOMContentLoaded", () => {
             setupButtonGroup("profession-group", "profession-other");
-            setupButtonGroup("trafic-group", "trafic-other");
+            setupButtonGroup("traffic-group", "traffic-other");
             setupButtonGroup("goal-group");
         });
