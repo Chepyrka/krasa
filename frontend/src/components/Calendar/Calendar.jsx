@@ -18,12 +18,12 @@ function Calendar() {
       {
         id: 1,
         title: "My first ever event",
-        start: "2025-06-20 14:00",
-        end: "2025-06-20 15:00",
+        start: "2025-07-20 14:00",
+        end: "2025-07-20 15:00",
         description: "This is a test event"
     }
   ],
-    selectedDate: "2025-06-20",
+    selectedDate: "2025-07-20",
     plugins: [
       createEventModalPlugin(),
       createDragAndDropPlugin()
