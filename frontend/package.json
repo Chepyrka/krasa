@@ -1,0 +1,41 @@
+{
+  "name": "krasa",
+  "version": "1.0.0",
+  "description": "**KRASA** is a modern web application built to simplify scheduling and client management for beauty professionals — including cosmetologists, nail artists, stylists, and barbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chepyrka/krasa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chepyrka/krasa/issues"
+  },
+  "homepage": "https://github.com/Chepyrka/krasa#readme",
+  "dependencies": {
+    "@schedule-x/drag-and-drop": "^2.33.0",
+    "@schedule-x/event-modal": "^2.33.0",
+    "@schedule-x/events-service": "^2.33.0",
+    "@schedule-x/react": "^2.33.0",
+    "@schedule-x/theme-default": "^2.33.0",
+    "babel-loader": "^10.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-react": "^7.27.1",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
