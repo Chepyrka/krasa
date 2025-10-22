@@ -18,6 +18,6 @@ It includes a responsive landing page, and will eventually have a full backend s
 
 ## 🛠 Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, CSS, JavaScript, React  
 - **Backend:** Spring Boot (Java) — coming soon  
 - **Tools:** Git, GitHub
