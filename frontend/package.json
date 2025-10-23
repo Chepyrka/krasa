@@ -27,7 +27,8 @@
     "@schedule-x/theme-default": "^2.33.0",
     "babel-loader": "^10.0.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",

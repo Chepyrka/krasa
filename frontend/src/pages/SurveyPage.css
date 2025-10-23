@@ -1,0 +1,137 @@
+/* Survey Page Specific Styles */
+@import '../styles/variables.css';
+
+.section-survey {
+  padding: var(--spacing-4xl) 0;
+  background: var(--primary-gradient);
+  color: var(--text-dark);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section-survey h2 {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-2xl);
+  font-weight: 700;
+}
+
+.survey-group {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.survey-question {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-medium);
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  justify-content: center;
+}
+
+.button-group button {
+  margin: 5px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--text-dark);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.button-group button.selected {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.button-group button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.other-input {
+  display: block;
+  margin: var(--spacing-md) auto 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  width: 80%;
+  max-width: 400px;
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+}
+
+.survey-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.survey-form label {
+  font-weight: 600;
+  font-size: var(--font-size-md);
+}
+
+.survey-form input,
+.survey-form textarea,
+.survey-form select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+}
+
+.survey-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.survey-form .primary-btn {
+  display: block;
+  margin: var(--spacing-2xl) auto 0;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) 2.5rem;
+  font-size: var(--font-size-md);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background var(--transition-normal);
+}
+
+.survey-form .primary-btn:hover {
+  background-color: #b9895d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-group button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .other-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}

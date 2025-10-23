@@ -1,0 +1,64 @@
+/* CSS Custom Properties - Theme Variables */
+:root {
+  /* Colors */
+  --primary-color: #D6A77A;
+  --primary-light: #EADCD2;
+  --background-light: #F8F1EC;
+  --text-dark: #1a1a1a;
+  --text-medium: #333;
+  --text-light: #666;
+  --white: #ffffff;
+  --black: #1a1a1a;
+  
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, #D6A77A, #EADCD2);
+  --hero-gradient: linear-gradient(-45deg, #F8F1EC, #EADCD2, #D6A77A, #F8F1EC);
+  --features-gradient: linear-gradient(135deg, #F8F1EC 0%, #EADCD2 100%);
+  --cta-gradient: linear-gradient(135deg, #D6A77A, #EADCD2);
+  
+  /* Typography */
+  --font-family: 'DM Serif Text', -apple-system, BlinkMacSystemFont, serif;
+  --font-size-xs: 0.9rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.3rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 2.8rem;
+  --font-size-5xl: 3rem;
+  --font-size-hero: clamp(3rem, 8vw, 6rem);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 50px;
+  
+  /* Shadows */
+  --shadow-sm: 0 8px 25px rgba(0,0,0,0.15);
+  --shadow-md: 0 10px 40px rgba(0,0,0,0.1);
+  --shadow-lg: 0 15px 35px rgba(0,0,0,0.2);
+  --shadow-xl: 0 20px 60px rgba(214, 167, 122, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.8s ease;
+  
+  /* Z-index */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-overlay: 3000;
+}
