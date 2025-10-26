@@ -1,6 +1,7 @@
 # Ignore the node_modules folder inside the frontend directory
 frontend/node_modules
-frontend/CHANGES.md
+frontend\CHANGES.md
+CHANGES.md # this file is in the root directory
 # Dependencies
 /node_modules
 
