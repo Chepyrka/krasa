@@ -1,9 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import './LandingPage.css';
 
 const LandingPage = () => {
+  const featureRefs = useRef([]);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        } else {
+          // Remove class when element leaves viewport to allow re-animation
+          entry.target.classList.remove('animated');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe all refs
+    const elementsToObserve = [
+      titleRef.current,
+      subtitleRef.current,
+      ...featureRefs.current
+    ].filter(Boolean);
+
+    elementsToObserve.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Cleanup
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -31,44 +65,44 @@ const LandingPage = () => {
 
       <section className="features" id="features">
         <div className="container">
-          <h2 className="section-title animate-on-scroll">Everything You Need to Succeed</h2>
-          <p className="section-subtitle animate-on-scroll">
+          <h2 ref={titleRef} className="section-title animate-on-scroll">Everything You Need to Succeed</h2>
+          <p ref={subtitleRef} className="section-subtitle animate-on-scroll">
             Powerful tools designed specifically for beauty professionals to manage appointments, 
             clients, and grow their business.
           </p>
           
           <div className="features-grid">
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[0] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">📅</div>
               <h3>Smart Scheduling</h3>
               <p>Intelligent appointment booking with automated confirmations, reminders, and rescheduling. Your calendar works for you 24/7.</p>
             </div>
             
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[1] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">👥</div>
               <h3>Client Management</h3>
               <p>Comprehensive client profiles with service history, preferences, and notes. Build stronger relationships and deliver personalized experiences.</p>
             </div>
             
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[2] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">💳</div>
               <h3>Integrated Payments(Coming soon..)</h3>
               <p>Accept payments seamlessly with built-in processing. Send invoices, track payments, and manage your finances all in one place.</p>
             </div>
             
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[3] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">📱</div>
               <h3>Mobile First(Coming soon..)</h3>
               <p>Native mobile apps for iOS and Android. Manage your business on-the-go with full functionality in your pocket.</p>
             </div>
             
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[4] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">📊</div>
               <h3>Business Analytics</h3>
               <p>Detailed insights into your performance, revenue trends, and client behavior. Make data-driven decisions to grow your business.</p>
             </div>
             
-            <div className="feature-card animate-on-scroll">
+            <div ref={el => featureRefs.current[5] = el} className="feature-card animate-on-scroll">
               <div className="feature-icon">🔒</div>
               <h3>Secure & Reliable</h3>
               <p>Enterprise-grade security with automatic backups. Your data is protected with bank-level encryption and 99.9% uptime.</p>
