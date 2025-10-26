@@ -1,0 +1,13 @@
+/* Footer Component Styles */
+@import '../../styles/variables.css';
+
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.footer p {
+  opacity: 0.7;
+}
