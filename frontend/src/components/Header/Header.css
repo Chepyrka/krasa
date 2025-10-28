@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-3xl) 0;
 }
 
 .logo {
@@ -48,7 +48,7 @@
 .cta-btn {
   background: var(--primary-gradient);
   color: var(--text-medium);
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: none;
   border-radius: var(--radius-xl);
   font-weight: 600;
